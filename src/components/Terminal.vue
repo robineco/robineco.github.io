@@ -68,7 +68,7 @@ export default {
     text-align: center;
 }
 #terminal {
-    height: 30rem;
+    height: 32rem;
     width: 60%;
     display: inline-block;
     background-color: #272727;
@@ -91,6 +91,8 @@ export default {
     margin: 1rem;
     color: greenyellow;
     text-align: left;
+    max-height: 28rem;
+    overflow: auto;
 }
 #user {
     color: greenyellow;
