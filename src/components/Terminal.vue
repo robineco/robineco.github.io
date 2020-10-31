@@ -65,7 +65,7 @@ export default {
     width: 60%;
     display: inline-block;
     background-color: #272727;
-     z-index: 1;
+    z-index: 1;
 }
 #topbar {
     height: 2rem;
@@ -76,6 +76,7 @@ export default {
     display: table;
 }
 #close-emoji {
+    display: inline-block;
     margin-top: 0.3rem;
     margin-right: 0.4rem;
 }
