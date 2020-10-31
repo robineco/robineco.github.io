@@ -1,11 +1,12 @@
 <template>
     <div id="terminal-wrapper">
         <div id="terminal">
+
             <div id="topbar">
                 <div id="close-emoji">❌</div>
             </div>
-            <div id="content">
 
+            <div id="content">
                 <vue-typed-js v-if="showStart" :strings="['robin@ubuntu:~$ sudo ./introduction.sh']" :contentType="'text'" @onComplete="switchText()">
                     <p class="typing"></p>
                 </vue-typed-js>
@@ -17,10 +18,10 @@
                 <vue-typed-js v-if="showGitHub" :strings="[gitHubText]" :contentType="'html'"  @onComplete="exitSkript()">
                     <p class="typing"></p>
                 </vue-typed-js>
-
             </div>
+
         </div>
-</div>
+    </div>
 </template>
 
 <script>
@@ -50,7 +51,13 @@ export default {
             setTimeout(() => this.showText = true, 1500);
         },
         exitSkript() {
-            setTimeout(() => this.showGitHub = false, 10000);
+            setTimeout(() => this.reset(), 10000);
+        },
+        reset() {
+            setTimeout(() => this.showGitHub = false, 500);
+            setTimeout(() => this.showStart = true, 500);
+            this.showText = false
+            this.displayTextFinished = false
         }
     }
 }
