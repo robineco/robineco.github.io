@@ -40,7 +40,7 @@ export default {
             showText: false,
             displayTextFinished: false,
             showGitHub: false,
-            text: "<p>Hi 👋 I'm Robin <br> Currently I am studying 👨‍💻 Software Engineering in the 5th semester.</p> <br> <p>My most used programming languages:</p> <ul><li>🏝️ Java</li><li>⚛️ React</li><li>✅ Vuejs</li><li>🐍 Python</li></ul> <p>My other skills:</p><ul><li>🐧 Linux</li><li>🐋 Docker</li></ul> <br> <p>Press any Key to exit...</p>",
+            text: "<p>Hi 👋 I'm Robin <br> Currently I am studying 👨‍💻 Software Engineering in the 5th semester.</p> <br> <p>I have much experience with:</p> <ul><li>🏝️ Java</li><li>⚛️ React</li><li>✅ Vuejs</li><li>🐍 Python</li></ul> <p>My other skills:</p><ul><li>🐧 Linux</li><li>🐋 Docker</li></ul> <br> <p>Press any Key to exit...</p>",
             gitHubText: "Take a look at my GitHub profile for more information: <a href=\"https://github.com/robineco\">GitHub</a>",
         }
     },
