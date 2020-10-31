@@ -13,5 +13,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: robineco/robineco.github.io
         TARGET_BRANCH: main
-        BUILD_SCRIPT: npm run build
+        BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: dist
