@@ -30,6 +30,7 @@ export default {
 #title {
   font-family: 'Roboto Mono', monospace;
   margin-bottom: 1.5rem;
+  min-width: 305px;
 }
 .gradient-border {
   --border-width: 3px;
