@@ -1,5 +1,8 @@
 <template>
   <v-container class="text-center">
+    <v-col cols="12">
+      <h2 class="font-weight-light">{{ title }}</h2>
+    </v-col>
     <v-row
       align="center"
       justify="center"
@@ -23,7 +26,7 @@ export default Vue.extend({
     BlogCard,
   },
   data: () => ({
-    title: 'Blog Page',
+    title: 'Welcome To My Blog',
     blogPosts: posts,
   }),
 });
@@ -31,6 +34,6 @@ export default Vue.extend({
 
 <style lang="css" scoped>
 .post-row {
-  margin-top: 3%;
+  margin-top: 0.5%;
 }
 </style>
