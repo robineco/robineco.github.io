@@ -3,21 +3,26 @@
     elevation="2"
     outlined
   >
-    <v-card-title>
-      {{title}}
-    </v-card-title>
-    <v-card-text class="text-left">
-      {{getBodyText}}
-    </v-card-text>
-    <v-card-actions v-if="link">
-      <v-btn
-        text
-        color="primary"
-        @click="learnMore"
-      >
-        Learn More
-      </v-btn>
-    </v-card-actions>
+    <v-img
+      height="180px"
+      src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+    >
+      <v-card-title>
+        {{title}}
+      </v-card-title>
+      <v-card-text class="text-left">
+        {{getBodyText}}
+      </v-card-text>
+      <v-card-actions v-if="link">
+        <v-btn
+          text
+          color="primary"
+          @click="learnMore"
+        >
+          Learn More
+        </v-btn>
+      </v-card-actions>
+    </v-img>
   </v-card>
 </template>
 

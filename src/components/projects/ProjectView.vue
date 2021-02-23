@@ -1,6 +1,9 @@
 <template>
   <v-container class="text-center">
     <v-row class="project-row">
+      <v-col cols="12">
+        <h2 class="font-weight-light">{{ title }}</h2>
+      </v-col>
       <v-col v-for="project in projects" :key="project.title" cols="12" md="6" sm="6" xs="12">
         <ProjectCard
           :title="project.title"
@@ -23,7 +26,7 @@ export default Vue.extend({
     ProjectCard,
   },
   data: () => ({
-    title: 'Project Page',
+    title: 'Welcome To My Project Overview',
     projects: projectList,
   }),
 });
@@ -31,6 +34,6 @@ export default Vue.extend({
 
 <style lang="css" scoped>
 .project-row {
-  margin-top: 3%;
+  margin-top: 0.5%;
 }
 </style>
