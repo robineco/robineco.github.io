@@ -9,11 +9,6 @@ const projects = [
     body: 'Admin UI for my server with Vue.js frontend and Go backend',
     link: 'https://github.com/robineco/server-admin-ui',
   },
-  {
-    title: 'Project Three',
-    body: '',
-    link: '',
-  },
 ];
 
 export default projects;

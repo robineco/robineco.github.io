@@ -14,6 +14,9 @@ export default Vue.extend({
   data: () => ({
     title: 'Landing Page',
   }),
+  mounted() {
+    this.$router.push('/projects');
+  },
 });
 </script>
 
