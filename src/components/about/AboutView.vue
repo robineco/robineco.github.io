@@ -6,7 +6,7 @@
         class="avatar-col text-center">
         <v-avatar
           class="profile-avatar"
-          size="300">
+          :size="!isMobile ? 250 : 150">
           <v-img
             :src="require('@/assets/about/profile.jpg')"
           />
@@ -33,7 +33,7 @@
           <v-tab @click="() => switchTab(0)">Programming</v-tab>
           <v-tab @click="() => switchTab(1)">Resume</v-tab>
         </v-tabs>
-        <div class="tab-content text-left">
+        <div class="tab-content">
           <ProgrammingTab v-if="activeTab === 0" />
           <ResumeTab v-if="activeTab === 1" />
         </div>
@@ -68,6 +68,11 @@ export default Vue.extend({
       window.location.href = link;
     },
   },
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.width < 980;
+    },
+  },
 });
 </script>
 
@@ -75,34 +80,33 @@ export default Vue.extend({
 .about-row {
   margin-top: 3%;
 }
-
 .divider {
   position: absolute;
-  width: 70%;
-  margin-left: 6%;
+  width: 65%;
+  margin-left: 10%;
   margin-top: 5%;
 }
-
 .profile-avatar {
+  margin-top: 5%;
   z-index: 2;
 }
-
 .tab-content {
   margin-top: 5%;
+  width: 100%;
+  text-align: left;
 }
-
 .link-section {
   margin-top: 5%;
 }
-
 .link-button {
   margin-bottom: 10px;
 }
-
 @media screen and (max-width: 1200px) {
   .divider {
     visibility: hidden;
   }
+  .tab-content {
+    text-align: center;
+  }
 }
-
 </style>

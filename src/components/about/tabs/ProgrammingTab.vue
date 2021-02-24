@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="programming-tab text-left">
     <v-card
       elevation="2"
       outlined
       max-width="600"
-      min-height="240"
+      min-height="260"
     >
       <v-card-title>
         {{ name }}
@@ -36,13 +36,15 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.programming-tab {
+  display: inline-block;
+}
 .content {
   font-size: 1rem;
   p {
     font-size: 1.1rem;
   }
 }
-
 ul li{
   float: left;
   width: 50%;//helps to determine number of columns, for instance 33.3% displays 3 columns
