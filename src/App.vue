@@ -8,6 +8,22 @@
     <v-main>
       <router-view/>
     </v-main>
+    <v-footer
+      padless
+      color="#142E45"
+      class="footer"
+    >
+      <v-col
+        cols="10"
+        offset="1"
+        class="text-center"
+      >
+        <strong>Made with ❤️ by robineco</strong>
+      </v-col>
+      <v-col cols="1">
+        <p class="icons">Icons by <span><a href="https://icons8.de">Icons8</a></span></p>
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
@@ -41,5 +57,11 @@ export default {
     text-decoration-line: underline;
     margin: 1rem 2rem;
   }
+}
+.footer {
+  color: #FFFFFF !important;
+}
+.icons {
+  margin: 0 !important;
 }
 </style>
