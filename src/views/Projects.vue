@@ -9,10 +9,14 @@
          sm="4"
          md="4"
          lg="3"
-         v-for="index in 9"
-         :key="index"
+         v-for="project in projects"
+         :key="project.id"
        >
-         <ProjectCard />
+         <ProjectCard
+          :title="project.title"
+          :content="project.content"
+          :link="project.link"
+         />
        </v-col>
      </v-row>
    </v-container>
@@ -21,11 +25,28 @@
 
 <script>
 import ProjectCard from '../components/projects/ProjectCard'
+import projectJson from '../assets/projects/projects.json'
 
 export default {
   name: 'Projects',
   components: {
     ProjectCard
+  },
+  metaInfo: {
+    title: 'My Projects'
+  },
+  data () {
+    return {
+      projects: []
+    }
+  },
+  mounted () {
+    this.readJSON()
+  },
+  methods: {
+    readJSON () {
+      this.projects = projectJson.projects
+    }
   }
 }
 </script>

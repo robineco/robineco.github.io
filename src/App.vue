@@ -31,6 +31,10 @@
 
 export default {
   name: 'App',
+  metaInfo: {
+    title: 'Robin Schlund',
+    titleTemplate: '%s'
+  },
   data: () => ({
     //
   }),

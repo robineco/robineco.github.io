@@ -15,6 +15,9 @@ export default {
   name: 'Home',
   components: {
     Terminal
+  },
+  metaInfo: {
+    title: 'Home'
   }
 }
 </script>

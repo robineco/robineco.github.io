@@ -1,14 +1,15 @@
 <template>
   <div class="card-wrapper d-flex flex-column justify-space-around">
-    <p>Wort des Tages</p>
+    <p>{{ title }}</p>
     <div class="card__content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales velit nec justo commodo, et rutrum purus pulvinar. Vivamus aliquet, ipsum ut sodales auctor, enim massa rutrum neque.</p>
+      <p>{{ content }}</p>
     </div>
     <div class="card__button d-flex justify-center">
       <v-btn
         color="primary"
         elevation="2"
         large
+        @click="redirect"
       >Go to Repository</v-btn>
     </div>
   </div>
@@ -20,13 +21,26 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'ProjectCard',
   props: {
-    //
+    title: {
+      type: String,
+      default: ''
+    },
+    content: {
+      type: String,
+      default: ''
+    },
+    link: {
+      type: String,
+      default: ''
+    }
   },
   data: () => ({
     //
   }),
   methods: {
-    //
+    redirect () {
+      window.location = this.link
+    }
   }
 })
 </script>

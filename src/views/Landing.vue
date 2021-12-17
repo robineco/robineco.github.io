@@ -20,6 +20,9 @@
 <script>
 export default {
   name: 'Landing',
+  metaInfo: {
+    title: 'Welcome to my Introduction'
+  },
   data () {
     return {
       value: 0
