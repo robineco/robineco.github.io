@@ -1,24 +1,5 @@
-# introduction
+# github.io introduction page
 
-## Project setup
-```
-npm install
-```
+**[Visit my introduction page](https://robin-schlund.de)**
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![introduction](https://raw.githubusercontent.com/robineco/robineco.github.io/master/.github/images/img.png)
