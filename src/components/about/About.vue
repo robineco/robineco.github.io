@@ -1,5 +1,5 @@
 <template>
-<div class="about-wrapper d-flex flex-column align-center">
+<div id="about" class="about-wrapper d-flex flex-column align-center">
   <p id="title">About Me</p>
   <v-row>
     <v-col class="d-flex justify-center">

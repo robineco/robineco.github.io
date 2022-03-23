@@ -1,5 +1,5 @@
 <template>
-<div class="contact-wrapper d-flex flex-column align-center">
+<div id="contact" class="contact-wrapper d-flex flex-column align-center">
   <p id="title">Contact Me</p>
   <v-row>
     <v-col

@@ -1,5 +1,5 @@
 <template>
-<div class="projects-wrapper d-flex flex-column align-center">
+<div id="projects" class="projects-wrapper d-flex flex-column align-center">
   <p id="title">My Projects</p>
   <v-row>
     <v-col

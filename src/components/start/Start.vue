@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column align-center">
+  <div id="home" class="d-flex flex-column align-center">
     <div class="title-text d-flex flex-column align-center">
       <p>Hello, I am</p>
       <p id="my-name">Robin Schlund</p>
@@ -42,7 +42,7 @@ export default {
 .my-image {
   margin-top: 5rem;
 }
-.v-image__image {
-  border-radius: 16px;
+.v-image {
+  border-radius: 80px 80px 0 0;
 }
 </style>
