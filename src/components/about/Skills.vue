@@ -1,5 +1,5 @@
 <template>
-<div class="card-wrapper text-center">
+<div class="card-wrapper text-center" @mouseover="hoverEvent" @mouseleave="leaveEvent">
   <v-img
       width="80"
       height="80"
@@ -27,6 +27,14 @@ export default {
       return require(`../../assets/about/${this.image}`)
     },
   },
+  methods: {
+    hoverEvent() {
+      this.$emit('hover', this.title.toLowerCase());
+    },
+    leaveEvent() {
+      this.$emit('leave', 'default');
+    }
+  },
 }
 </script>
 
@@ -36,11 +44,15 @@ export default {
   width: 8rem;
   height: 8rem;
   border-radius: 16px;
+  cursor: help;
   .v-image {
     margin: 0 auto;
   }
   #card-title {
     margin: 0;
   }
+}
+.card-wrapper:hover {
+  transform: scale(1.2) perspective(1px)
 }
 </style>
