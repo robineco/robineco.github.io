@@ -6,13 +6,19 @@
       <li
         v-for="item in getFirstHalf"
         :key="item"
-      >{{item}}</li>
+      >
+        <span><img src="@/assets/verified.png" alt="v"/></span>
+        {{item}}
+      </li>
     </ul>
     <ul>
       <li
         v-for="item in getSecondHalf"
         :key="item"
-      >{{item}}</li>
+      >
+        <span><img src="@/assets/verified.png" alt="v"/></span>
+        {{item}}
+      </li>
     </ul>
   </div>
 </div>
@@ -61,6 +67,9 @@ export default {
   gap: 10%;
   margin-bottom: 2rem;
   li {
+    display: flex;
+    gap: .25rem;
+    list-style: none;
     font-weight: 300;
     font-size: 20px;
     line-height: 27px;

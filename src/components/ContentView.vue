@@ -1,6 +1,6 @@
 <template>
 <v-container>
-  <Overlay />
+  <Overlay v-if="!scroll" />
   <Start />
   <About />
   <Experience />
@@ -26,6 +26,25 @@ export default {
     Projects,
     Contact,
     Overlay,
+  },
+  data: () => ({
+    scroll: false,
+  }),
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.scroll = true;
+      window.removeEventListener('scroll', this.handleScroll);
+      setTimeout(() => {
+        this.scroll = false;
+        window.addEventListener('scroll', this.handleScroll);
+      }, 1500);
+    },
   },
 }
 </script>

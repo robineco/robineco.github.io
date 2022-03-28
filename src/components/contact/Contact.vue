@@ -36,7 +36,7 @@ export default {
       {
         name: 'Email',
         image: 'email.png',
-        link: '',
+        link: 'mailto:contact-robin@tutanota.de',
       },
     ],
   }),
