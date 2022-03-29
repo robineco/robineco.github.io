@@ -6,7 +6,7 @@
       <p>Software Engineering Student</p>
     </div>
     <div class="my-image">
-      <div class="short-contact d-flex flex-column align-center">
+      <div v-if="!isMobile" class="short-contact d-flex flex-column align-center">
         <div class="line" />
         <div class="contact-container d-flex flex-column align-center justify-center">
           <img
@@ -58,6 +58,11 @@ export default {
       window.location = link;
     },
   },
+  computed: {
+    isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+  }
 }
 </script>
 
