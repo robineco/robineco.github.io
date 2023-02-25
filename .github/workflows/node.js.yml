@@ -6,11 +6,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-
+        with:
+          node-version: 17
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
         with:
-          node-version: ${{ env.NodeVersion }}
+          node-version: 17
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_REPO: robineco/robineco.github.io
