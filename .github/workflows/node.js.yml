@@ -4,14 +4,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: robineco/robineco.github.io
-        TARGET_BRANCH: main
-        BUILD_SCRIPT: yarn && yarn build
-        BUILD_DIR: dist
+      - name: vuepress-deploy
+        uses: jenkey2011/vuepress-deploy@master
+        with:
+          node-version: 16.10.0
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          TARGET_REPO: robineco/robineco.github.io
+          TARGET_BRANCH: main
+          BUILD_SCRIPT: yarn && yarn build
+          BUILD_DIR: dist
