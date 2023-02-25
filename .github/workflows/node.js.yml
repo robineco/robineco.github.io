@@ -9,7 +9,7 @@ jobs:
         with:
           node-version: 17
       - name: vuepress-deploy
-        uses: jenkey2011/vuepress-deploy@master
+        uses: robineco/vuepress-deploy@v2.1
         with:
           node-version: 17
         env:
