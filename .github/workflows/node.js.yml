@@ -6,15 +6,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-        with:
-          node-version: 17
       - name: vuepress-deploy
         uses: robineco/vuepress-deploy@v2.1
-        with:
-          node-version: 17
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_REPO: robineco/robineco.github.io
           TARGET_BRANCH: main
-          BUILD_SCRIPT: npm install && npm build
+          BUILD_SCRIPT: yarn && yarn build
           BUILD_DIR: dist
