@@ -10,7 +10,7 @@ jobs:
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
         with:
-          node-version: 16.10.0
+          node-version: ${{ env.NodeVersion }}
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_REPO: robineco/robineco.github.io
